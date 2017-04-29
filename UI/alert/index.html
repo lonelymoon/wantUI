@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>alert提示框UI</title>
+<link rel="stylesheet" type="text/css" href="css/wantUI-alert.css">
+</head>
+<body>
+
+<button id="btn">弹出框</button>
+<div id="content"></div>
+<!--alert-->
+
+<div id="wantUI-alert-box">
+	<div id="wantUI-alert-dialog-box">
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-title">
+			标题
+		</div>
+		<div class="wantUI-alert-baseBgColor" id="wantUI-alert-msg">
+			内容
+		</div>
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-btn">
+			确定
+		</div>
+	</div>
+	<div class="wantUI-alert-bglayer"></div>
+</div>
+
+<!--alert end-->
+<script type="text/javascript" src="js/wantUI-alert.js"></script>
+<script type="text/javascript">
+var i = 0;
+
+wantAlert.setValues({
+	title : "警告",
+	msg : "我是一个警告"
+});
+
+document.getElementById("btn").onclick = function(e){
+	wantAlert.showAlert();
+};
+//设置参数
+wantAlert.setValue("callback",function(e){
+	i++;
+	document.getElementById("content").innerHTML = "完成了"+i+"次alert操作";
+});
+</script>
+</body>
+</html>
