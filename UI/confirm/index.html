@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>confirm确认框UI</title>
+<link rel="stylesheet" type="text/css" href="css/wantUI-confirm.css">
+</head>
+<body>
+
+<button id="btn">确认框</button>
+<div id="content">
+	<div id="c1"></div>
+	<div id="c2"></div>
+</div>
+<!--confirm-->
+
+<div id="wantUI-confirm-box">
+	<div id="wantUI-confirm-dialog">
+		<div id="wantUI-confirm-title" class="wantUI-confirm-baseFontColor wantUI-confirm-commonBgColor">
+			确认框
+		</div>
+		<div id="wantUI-confirm-msg" class="wantUI-confirm-baseBgColor">
+			确认内容
+		</div>
+		<div id="wantUI-confirm-fn" class="wantUI-confirm-baseBgColor">
+			<div id="wantUI-confirm-cancel" class="wantUI-confirm-btn wantUI-confirm-baseFontColor wantUI-confirm-commonBgColor">
+				取消
+			</div>
+			<div id="wantUI-confirm-pass" class="wantUI-confirm-btn wantUI-confirm-baseFontColor wantUI-confirm-commonBgColor">
+				确认
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="wantUI-confirm-bglayer"></div>
+</div>
+
+<!--confirm end-->
+<script type="text/javascript" src="js/wantUI-confirm.js"></script>
+<script type="text/javascript">
+var i=0,j=0;
+document.getElementById("btn").onclick = function(e){
+	wantConfirm.setValues({
+		title : "确认内容",
+		msg : "您需要确认一下当前的内容",
+		pass : "我了解了",
+		cancel : "我有疑问",
+		succCallback : function(e){
+			i++;
+			document.getElementById("c1").innerHTML = "您确认了"+i+"次";
+		},
+		cancCallback : function(e){
+			j++;
+			document.getElementById("c2").innerHTML = "您取消了"+j+"次";
+		}
+	});
+	wantConfirm.showConfirm();
+};
+</script>
+</body>
+</html>
