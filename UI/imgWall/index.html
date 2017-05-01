@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>imgWall照片查看UI</title>
+<link rel="stylesheet" type="text/css" href="css/wantUI-imgWall.css">
+<style type="text/css">
+#content img{
+	max-width: 600px;
+}
+</style>
+</head>
+<body>
+<div id="content">
+	<img src="1.jpg" data-idx="1">
+	<img src="1.jpg" data-idx="3">
+	<img src="2.jpg" data-idx="2">
+</div>
+<!--confirm-->
+
+<div id="wantUI-imgWall-box">
+	<div id="wantUI-imgWall-dialog">
+		<div id="wantUI-imgWall-wrapper">
+			<div id="wantUI-imgWall-imgbox">
+				<img src="" id="wantUI-imgWall-img">
+			</div>
+			<div class="wantUI-fn-box">
+				<div id="wantUI-imgWall-prev">prev</div>
+				<div id="wantUI-imgWall-next">next</div>
+			</div>
+		</div>
+	</div>
+	<div class="wantUI-imgWall-bglayer"></div>
+</div>
+
+<!--confirm end-->
+<script type="text/javascript" src="js/wantUI-imgWall.js"></script>
+<script type="text/javascript">
+
+var imgs = document.getElementsByTagName("img");
+
+for( var i = 0,img; img= imgs[i++]; ){
+	img.onclick = function(e){
+		e = e || event;
+		var target = e.target || e.srcElement,
+			idx = target.getAttribute("data-idx"),
+			src = target.src;
+
+		if(!idx) return false;
+
+		wantImgWall.setValues({
+			url:src,
+			idx:idx,
+			callback : function(e){
+				wantImgWall.showWall();
+			}
+		});
+	}
+}
+</script>
+</body>
+</html>
