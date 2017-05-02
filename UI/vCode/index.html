@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>验证码ui</title>
+<link rel="stylesheet" type="text/css" href="css/wantUI-vCode.css">
+</head>
+<body>
+
+<button id="btn">弹出框</button>
+<div id="content"></div>
+<!--vCode-->
+
+<div id="wantUI-vCode-box">
+	<div id="wantUI-vCode-dialog-box">
+		<div id="wantUI-vCode-close">X</div>
+		<div id="wantUI-vCode-inputBox">
+			<div class="wantUI-vCode-inputList"></div>
+			<div class="wantUI-vCode-inputList"></div>
+			<div class="wantUI-vCode-inputList"></div>
+			<div class="wantUI-vCode-inputList"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="wantUI-vCode-msg">请点选“<span id="wantUI-vCode-text"></span>”作为文字验证码</div>
+		<div id="wantUI-vCode-codeBox">
+		</div>
+		<div class="wantUI-vCode-btnBox">
+			<div id="wantUI-vCode-over" class="wantUI-vCode-btn wantUI-vCode-baseFontColor wantUI-vCode-commonBgColor">确认</div>
+			<div id="wantUI-vCode-del" class="wantUI-vCode-btn wantUI-vCode-commonFontColor wantUI-vCode-baseBgColor">撤销</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="wantUI-vCode-bglayer"></div>
+</div>
+
+<!--vCode end-->
+<script type="text/javascript" src="js/wantUI-vCode.js"></script>
+<script type="text/javascript">
+document.getElementById("btn").onclick = function(e){
+	wantVCode.setValues();
+	wantVCode.showVCode();
+};
+</script>
+</body>
+</html>

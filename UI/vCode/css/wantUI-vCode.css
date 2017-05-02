@@ -1,0 +1,166 @@
+/*
+** 手动合并css可以直接将下面的注释内部的代码复制过去即可
+*/
+
+.wantUI-vCode-baseFontColor{
+	color: #fff;
+}
+
+.wantUI-vCode-commonFontColor{
+	color: #66ccff;
+}
+
+.wantUI-vCode-baseBgColor{
+	background-color: #fff;
+}
+
+.wantUI-vCode-commonBgColor{
+	background-color: #66ccff;
+}
+
+#wantUI-vCode-box{
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	font-size: 12px;
+	z-index: 1000;
+	display: none;
+}
+
+.wantUI-vCode-bglayer{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: #000;
+	filter:alpha(opacity=30);
+	+zoom : 1;
+}
+
+#wantUI-vCode-dialog-box{
+	position: relative;
+	height: auto;
+	width: 80%;
+	max-height: 80%;
+	margin: 0 auto;
+	background: #fff;
+	z-index: 2;
+	max-width: 320px;
+	font-size: 16px;
+	font-family: "Microsoft Yahei";
+	padding-bottom: 20px;
+}
+
+#wantUI-vCode-close{
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	color: #222;
+	font-size: 1.2em;
+}
+
+#wantUI-vCode-inputBox{
+	position: relative;
+	height: auto;
+	padding-top: 30px;
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.wantUI-vCode-inputList{
+	position: relative;
+	border: 1px solid #c0c0c0;
+	margin-right: 1px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 23%;
+	height: 2em;
+	line-height: 2em;
+	float: left;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.wantUI-vCode-msg{
+	position: relative;
+	padding: 0.5em 0em;
+	max-width: 70%;
+	font-size: 0.8em;
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#wantUI-vCode-text{
+	position: relative;
+	height: auto;
+	color: #0f80fc;
+}
+
+#wantUI-vCode-codeBox{
+	position: relative;
+	height: auto;
+	max-width: 60%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.wantUI-vCode-codeList{
+	position: relative;
+	height: auto;
+	width: 32%;
+	float: left;
+	border: 1px solid #c0c0c0;
+	padding: 0.5em 0em;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.wantUI-vCode-codeList:hover{
+	cursor: pointer;
+}
+
+.wantUI-vCode-btnBox{
+	position: relative;
+	height: auto;
+	max-width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.wantUI-vCode-btn{
+	position: relative;
+	width: 48%;
+	margin-right: 1%;
+	text-align: center;
+	padding: 0.5em 0em;
+	font-size: 1.3em;
+	float: left;
+	border: 1px solid #e0e0e0;
+}
+
+.wantUI-vCode-btn:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+#wantUI-vCode-del{
+	border: 1px solid #e0e0e0;
+}
+
+.clear{
+	clear: both;
+}
+
+@media screen and (min-width: 0px){
+	.wantUI-vCode-bglayer{
+		background: rgba(0,0,0,0.3);
+		filter:alpha(opacity=100);
+	}
+}
+
+/*vCode UI Css End*/
