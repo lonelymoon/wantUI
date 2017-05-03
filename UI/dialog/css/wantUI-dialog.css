@@ -1,0 +1,313 @@
+/*
+** 手动合并css可以直接将下面的注释内部的代码复制过去即可
+*/
+
+.wantUI-dialog-baseFontColor{
+	color: #fff;
+}
+
+.wantUI-dialog-commonFontColor{
+	color: #66ccff;
+}
+
+.wantUI-dialog-baseBgColor{
+	background-color: #fff;
+}
+
+.wantUI-dialog-commonBgColor{
+	background-color: #66ccff;
+}
+
+#wantUI-dialog-box{
+	position: fixed;
+	z-index: 1000;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+}
+
+.wantUI-dialog-bglayer{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background: #000;
+	filter: alpha(opacity=30);
+	+zoom : 1;
+}
+
+#wantUI-dialog{
+	position: relative;
+	height: auto;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 16px;
+	z-index: 2;
+}
+
+.clear{
+	clear: both;
+	float: none!important;
+}
+
+@media screen and (min-width: 0px){
+	.wantUI-dialog-bglayer{
+		background: rgba(0,0,0,0.3);
+		filter:alpha(opacity=100);
+	}
+}
+
+/**************ALERT**************/
+#wantUI-dialog[data-type="alert"]{
+	max-width: 300px;
+}
+
+#wantUI-alert-title{
+	position: relative;
+	height: auto;
+	padding: 0.6em 0em;
+	text-align: center;
+	font-size: 1em;
+}
+
+#wantUI-alert-msg{
+	position: relative;
+	min-height: 5em;
+	height: auto;
+	padding: 0.8em 1em;
+	font-size: 0.8em;
+}
+
+#wantUI-alert-btn{
+	position: relative;
+	height: auto;
+	padding: 0.6em 0em;
+	text-align: center;
+	font-size: 1em;
+}
+
+/**************Confirm**************/
+#wantUI-dialog[data-type="confirm"]{
+	max-width: 420px;
+}
+
+#wantUI-confirm-title{
+	position: relative;
+	height: auto;
+	padding: 0.5em 0em;
+	-webkit-box-sizing: border-box;
+	box-sizing : border-box;
+	padding-left: 0.7em;
+	font-size: 1em;
+	font-weight: 800;
+}
+
+#wantUI-confirm-msg{
+	position: relative;
+	height: auto;
+	min-height: 6em;
+	padding: 1.4em 1em;
+	-webkit-box-sizing: border-box;
+	box-sizing : border-box;
+	font-size: 0.75em;
+	color: #222;
+	border-bottom: 1px solid #dedede;
+}
+
+#wantUI-confirm-fn{
+	position: relative;
+	height: auto;
+	padding: 0.5em 0em;
+}
+
+.wantUI-confirm-btn{
+	position: relative;
+	height: auto;
+	width: 20%;
+	font-size: 0.8em;
+	float: right;
+	margin-right: 0.7em;
+	text-align: center;
+	padding: 0.6em 0em;
+}
+
+.wantUI-confirm-btn:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+
+/**************imgWall**************/
+#wantUI-dialog[data-type="imgWall"]{
+	max-width: 80%;
+	max-height: 80%;
+	text-align: center;
+}
+
+#wantUI-imgWall-wrapper{
+	position: relative;
+	display: inline-block;
+	+zoom:1;
+	+display: inline;
+	width: auto;
+	height: auto;
+	padding: 20px;
+	background: #fff;
+}
+
+#wantUI-imgWall-imgbox{
+	position: relative;
+	height: auto;
+	padding: 0px;
+}
+
+#wantUI-imgWall-img{
+	position: relative;
+	max-height: 400px;
+	max-width: 100%;
+}
+
+.wantUI-fn-box{
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 50%;
+	height: 40px;
+	margin-top: -20px;
+	font-size: 1.3em;
+}
+
+#wantUI-imgWall-prev{
+	position: absolute;
+	top: 0px;
+	left: 0%;
+	background: #fff;
+}
+
+#wantUI-imgWall-prev:hover{
+	cursor: pointer;
+}
+
+#wantUI-imgWall-next{
+	position: absolute;
+	top: 0px;
+	right: 0%;
+	background: #fff;
+}
+
+#wantUI-imgWall-next:hover{
+	cursor: pointer;
+}
+
+/**************vCode***************/
+#wantUI-dialog[data-type="vCode"]{
+	max-width: 320px;
+	background: #fff;
+	padding-bottom: 20px;
+}
+
+#wantUI-vCode-close{
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	color: #222;
+	font-size: 1.2em;
+}
+
+#wantUI-vCode-close:hover{
+	cursor: pointer;
+}
+
+#wantUI-vCode-inputBox{
+	position: relative;
+	height: auto;
+	padding-top: 30px;
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.wantUI-vCode-inputList{
+	position: relative;
+	border: 1px solid #c0c0c0;
+	margin-right: 1px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 23%;
+	height: 2em;
+	line-height: 2em;
+	float: left;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.wantUI-vCode-msg{
+	position: relative;
+	padding: 0.5em 0em;
+	max-width: 70%;
+	font-size: 0.8em;
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#wantUI-vCode-text{
+	position: relative;
+	height: auto;
+	color: #0f80fc;
+}
+
+#wantUI-vCode-codeBox{
+	position: relative;
+	height: auto;
+	max-width: 60%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.wantUI-vCode-codeList{
+	position: relative;
+	height: auto;
+	width: 32%;
+	float: left;
+	border: 1px solid #c0c0c0;
+	padding: 0.5em 0em;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.wantUI-vCode-codeList:hover{
+	cursor: pointer;
+}
+
+.wantUI-vCode-btnBox{
+	position: relative;
+	height: auto;
+	max-width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.wantUI-vCode-btn{
+	position: relative;
+	width: 48%;
+	margin-right: 1%;
+	text-align: center;
+	padding: 0.5em 0em;
+	font-size: 1.3em;
+	float: left;
+	border: 1px solid #e0e0e0;
+}
+
+.wantUI-vCode-btn:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+#wantUI-vCode-del{
+	border: 1px solid #e0e0e0;
+}
+/*dialog UI Css End*/

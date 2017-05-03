@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="css/wantUI-dialog.css">
+<style type="text/css">
+img{
+	max-width: 400px;
+}
+</style>
+</head>
+<body>
+<button id="alert-show-btn">提示框</button>
+<button id="confirm-show-btn">确认框</button>
+<button id="vCode-show-btn">验证码</button>
+<img src="1.jpg" data-wantui-idx="1">
+<img src="2.jpg" data-wantui-idx="2">
+<!--dialog UI-->
+<div id="wantUI-dialog-box">
+	<div id="wantUI-dialog">
+	</div>
+	<div class="wantUI-dialog-bglayer"></div>
+</div>
+<!--dialog UI-->
+</body>
+<script type="text/javascript" src="js/wantUI-dialog.js"></script>
+<script type="text/javascript">
+(function(){
+
+document.getElementById("alert-show-btn").onclick = function(e){
+	wantDialog.init("alert");
+	wantDialog.setValues({
+		title : "警告",
+		msg : "我是警告",
+		callback : function(e){console.log(e);}
+	});
+	wantDialog.show();
+};
+
+document.getElementById("confirm-show-btn").onclick = function(e){
+	wantDialog.init("confirm");
+	wantDialog.setValues({
+		title : "警告",
+		msg : "我是警告",
+		succCallback : function(e){console.log(e);}
+	});
+	wantDialog.show();
+};
+
+document.getElementById("vCode-show-btn").onclick = function(e){
+	wantDialog.init("vCode");
+	wantDialog.setValues({
+		callback : function(){console.log("d");}
+	});
+	wantDialog.show();
+};
+
+var imgs = document.getElementsByTagName("img");
+for( var i = 0, img; img = imgs[i++]; ){
+	img.onclick = function(e){
+		e = e || event;
+		var target = e.target || e.srcElement,
+			id = target.getAttribute("data-wantui-idx"),
+			src = target.src;
+
+		if(!id && id !== 0){
+			return;
+		}
+
+		wantDialog.init("imgWall");
+		wantDialog.setValues({
+			attr : "data-wantui-idx",
+			idx : id,
+			url : src
+		});
+		wantDialog.show();
+	};
+}
+
+})();
+</script>
+</html>
