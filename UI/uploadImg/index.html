@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>图片上传ui</title>
+<link rel="stylesheet" type="text/css" href="css/wantUI-uploadImg.css">
+</head>
+<body>
+
+<button id="btn">上传框</button>
+<div id="content"></div>
+<!--uploadImg-->
+
+<div id="wantUI-uploadImg-box">
+	<div id="wantUI-uploadImg-dialog-box">
+		<div id="wantUI-uploadImg-close">X</div>
+		<div id="wantUI-uploadImg-note">都是卡的</div>
+		<div id="wantUI-uploadImg-uploadBox">
+			<label for="wantUI-uploadImg-upload" id="wantUI-uploadImg-label">+</label>
+			<input type="file" id="wantUI-uploadImg-upload" multiple="multiple" />
+			<div id="wantUI-uploadImg-btn" class="wantUI-uploadImg-commonBgColor wantUI-uploadImg-baseFontColor">上传</div>
+		</div>
+		<div id="wantUI-uploadImg-imgBox">
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="wantUI-uploadImg-bglayer"></div>
+</div>
+
+<!--uploadImg end-->
+<script type="text/javascript" src="js/wantUI-uploadImg.js"></script>
+<script type="text/javascript">
+document.getElementById("btn").onclick = function(){
+	wantUploadImg.setValues({
+		callback : function(){},
+		msg : "hello"
+	});
+	wantUploadImg.showUploadImg();
+};
+</script>
+</body>
+</html>
