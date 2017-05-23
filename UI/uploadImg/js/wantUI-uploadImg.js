@@ -121,7 +121,7 @@ WantUploadImg.prototype = {
 			_self.__stopBubble(e);
 		};
 
-		_self.layer.ontouchstart = function(e){
+		_self.layer.ontouchmove = function(e){
 			e = e || event;
 			_self.__preventDefault(e);
 			_self.__stopBubble(e);
@@ -157,7 +157,7 @@ WantUploadImg.prototype = {
 				div.className = "wantUI-uploadImg-imgList";
 				div.innerHTML = '<img src="'+value+'" class="wantUI-uploadImg-img" />';
 				_self.imgBox.insertBefore(div,firstChild);
-			};
+			};	
 		} else {
 			this.fileEle.onchange = function(e){
 				e = e || event;
@@ -166,7 +166,7 @@ WantUploadImg.prototype = {
 			};
 		}
 
-
+		
 	},
 
 	//使提示框垂直居中

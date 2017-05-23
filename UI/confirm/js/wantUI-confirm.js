@@ -150,7 +150,7 @@ WantConfirm.prototype = {
 			_self.__stopBubble(e);
 		};
 
-		_self.layer.ontouchstart = function(e){
+		_self.layer.ontouchmove = function(e){
 			e = e || event;
 			_self.__preventDefault(e);
 			_self.__stopBubble(e);
